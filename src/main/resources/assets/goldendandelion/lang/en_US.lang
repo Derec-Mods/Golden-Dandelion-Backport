@@ -1,0 +1,10 @@
+# en_US.lang — "These are the translations you're looking for."
+
+# Block names
+tile.golden_dandelion.name=Golden Dandelion
+
+# Item names
+item.golden_dandelion_item.name=Golden Dandelion
+
+# Creative tab
+itemGroup.goldendandelion=Golden Dandelion

@@ -1,0 +1,16 @@
+[
+  {
+    "modid": "goldendandelion",
+    "name": "Golden Dandelion",
+    "description": "Backports the Golden Dandelion — a flower that permanently freezes the age of baby mobs when fed to them. A gift from the Force itself. Or maybe from Palpatine. Probably Palpatine.",
+    "version": "${version}",
+    "mcversion": "${mcversion}",
+    "url": "https://github.com/Derec-Mods/Golden-Dandelion-Backport",
+    "updateUrl": "",
+    "authorList": ["Derec-Mods"],
+    "credits": "Inspired by prequel memes and an irresponsible number of Star Wars references.",
+    "logoFile": "",
+    "screenshots": [],
+    "dependencies": []
+  }
+]
