@@ -1,0 +1,6 @@
+{
+  "parent": "block/cross",
+  "textures": {
+    "cross": "goldendandelion:blocks/golden_dandelion"
+  }
+}
