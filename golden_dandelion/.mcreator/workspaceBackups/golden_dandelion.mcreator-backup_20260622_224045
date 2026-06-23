@@ -1,0 +1,89 @@
+{
+  "mod_elements": [
+    {
+      "name": "GoldenDandelion",
+      "type": "plant",
+      "sortid": 1,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "golden_dandelion"
+    },
+    {
+      "name": "PiglinLoved",
+      "type": "tag",
+      "sortid": 2,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "piglin_loved"
+    },
+    {
+      "name": "UseGoldenDandelion",
+      "type": "procedure",
+      "sortid": 3,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "use_golden_dandelion",
+      "metadata": {
+        "files": [
+          "src/main/java/net/derexxd/goldendandelion/procedure/ProcedureUseGoldenDandelion.java"
+        ],
+        "dependencies": []
+      }
+    },
+    {
+      "name": "KeepBabyYoung",
+      "type": "procedure",
+      "sortid": 4,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "keep_baby_young",
+      "metadata": {
+        "files": [
+          "src/main/java/net/derexxd/goldendandelion/procedure/ProcedureKeepBabyYoung.java"
+        ],
+        "dependencies": []
+      }
+    },
+    {
+      "name": "CraftGoldenDandelion",
+      "type": "recipe",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "craft_golden_dandelion",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/golden_dandelion/recipes/craft_golden_dandelion.json"
+        ]
+      }
+    }
+  ],
+  "variable_elements": [],
+  "sound_elements": [],
+  "language_map": {
+    "en_us": {}
+  },
+  "foldersRoot": {
+    "name": "~",
+    "children": []
+  },
+  "workspaceSettings": {
+    "modid": "golden_dandelion",
+    "modName": "Golden Dandelion",
+    "version": "1.0.6.1",
+    "description": "Backports the newly added Golden Dandelion, a flower that permanently pauses the aging of baby mobs when fed to them. ",
+    "author": "DerexXD",
+    "websiteURL": "https://github.com/DereC4",
+    "license": "MIT License",
+    "disableForgeVersionCheck": true,
+    "serverSideOnly": false,
+    "requiredMods": [],
+    "dependencies": [],
+    "dependants": [],
+    "mcreatorDependencies": [],
+    "currentGenerator": "forge-1.12.2",
+    "credits": "Created using mod maker MCreator - https://mcreator.net/about",
+    "modElementsPackage": "net.derexxd.goldendandelion",
+    "lockBaseModFiles": false
+  },
+  "mcreatorVersion": 202300452316
+}
