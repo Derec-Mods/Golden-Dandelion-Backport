@@ -1,7 +1,9 @@
 package net.derexxd.goldendandelion.handler;
 
 import net.derexxd.goldendandelion.GoldenDandelionConstants;
-import net.minecraft.entity.passive.EntityAnimal;
+import net.minecraft.entity.EntityAgeable;
+import net.minecraft.entity.passive.EntityVillager;
+import net.minecraft.nbt.NBTTagCompound;
 import net.minecraftforge.event.entity.living.LivingEvent;
 import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
 
@@ -13,12 +15,18 @@ public class GoldenDandelionAgeHandler {
 			return;
 		}
 
-		if (!(event.getEntityLiving() instanceof EntityAnimal)) {
+		if (!(event.getEntityLiving() instanceof EntityAgeable)) {
 			return;
 		}
 
-		EntityAnimal ageable = (EntityAnimal) event.getEntityLiving();
-		if (!ageable.getEntityData().getBoolean(GoldenDandelionConstants.NBT_AGE_LOCKED)) {
+		if (event.getEntityLiving() instanceof EntityVillager) {
+			return;
+		}
+
+		EntityAgeable ageable = (EntityAgeable) event.getEntityLiving();
+		NBTTagCompound data = ageable.getEntityData();
+		if (!data.getBoolean(GoldenDandelionConstants.NBT_AGE_LOCKED)
+				&& !data.getBoolean(GoldenDandelionConstants.NBT_AGE_LOCKED_LEGACY)) {
 			return;
 		}
 
