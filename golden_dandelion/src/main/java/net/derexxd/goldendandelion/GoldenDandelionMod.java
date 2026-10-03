@@ -22,6 +22,7 @@ import net.minecraftforge.fml.relauncher.SideOnly;
 import net.minecraft.client.renderer.block.model.ModelResourceLocation;
 import net.minecraft.client.renderer.block.statemap.StateMapperBase;
 import net.minecraft.item.Item;
+import net.minecraft.util.SoundEvent;
 
 @Mod(
 		modid = GoldenDandelionMod.MODID,
@@ -78,6 +79,14 @@ public class GoldenDandelionMod {
 	public void registerItems(RegistryEvent.Register<Item> event) {
 		event.getRegistry().register(
 				new ItemBlockGoldenDandelion(GOLDEN_DANDELION).setRegistryName(GOLDEN_DANDELION.getRegistryName())
+		);
+	}
+
+	@SubscribeEvent
+	public void registerSounds(RegistryEvent.Register<SoundEvent> event) {
+		event.getRegistry().registerAll(
+				GoldenDandelionSounds.ITEM_USE,
+				GoldenDandelionSounds.ITEM_UNUSE
 		);
 	}
 

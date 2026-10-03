@@ -1,1 +1,22 @@
-{}
+{
+  "item.golden_dandelion.use": {
+    "category": "player",
+    "subtitle": "subtitles.item.golden_dandelion.use",
+    "sounds": [
+      {
+        "name": "minecraft:entity/experience_orb/touch",
+        "pitch": 0.85
+      }
+    ]
+  },
+  "item.golden_dandelion.unuse": {
+    "category": "player",
+    "subtitle": "subtitles.item.golden_dandelion.unuse",
+    "sounds": [
+      {
+        "name": "minecraft:entity/experience_orb/touch",
+        "pitch": 1.25
+      }
+    ]
+  }
+}

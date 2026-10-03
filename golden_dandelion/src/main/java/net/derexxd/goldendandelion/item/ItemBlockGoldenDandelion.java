@@ -1,6 +1,7 @@
 package net.derexxd.goldendandelion.item;
 
 import net.derexxd.goldendandelion.GoldenDandelionConstants;
+import net.derexxd.goldendandelion.GoldenDandelionSounds;
 import net.minecraft.block.Block;
 import net.minecraft.entity.EntityAgeable;
 import net.minecraft.entity.EntityLivingBase;
@@ -11,6 +12,7 @@ import net.minecraft.item.ItemStack;
 import net.minecraft.nbt.NBTTagCompound;
 import net.minecraft.util.EnumHand;
 import net.minecraft.util.EnumParticleTypes;
+import net.minecraft.util.SoundCategory;
 import net.minecraft.world.WorldServer;
 
 public class ItemBlockGoldenDandelion extends ItemBlock {
@@ -64,6 +66,7 @@ public class ItemBlockGoldenDandelion extends ItemBlock {
 			if (player.world instanceof WorldServer) {
 				spawnFeedbackParticles((WorldServer) player.world, ageable, false);
 			}
+			player.world.playSound(null, target.posX, target.posY, target.posZ, GoldenDandelionSounds.ITEM_UNUSE, SoundCategory.PLAYERS, 1.0F, 1.25F);
 		} else {
 			// Halting Growth: set lock tag
 			int currentAge = ageable.getGrowingAge();
@@ -75,6 +78,7 @@ public class ItemBlockGoldenDandelion extends ItemBlock {
 			if (player.world instanceof WorldServer) {
 				spawnFeedbackParticles((WorldServer) player.world, ageable, true);
 			}
+			player.world.playSound(null, target.posX, target.posY, target.posZ, GoldenDandelionSounds.ITEM_USE, SoundCategory.PLAYERS, 1.0F, 0.85F);
 		}
 
 		if (!player.capabilities.isCreativeMode) {

@@ -1,1 +1,4 @@
 tile.golden_dandelion.name=Golden Dandelion
+item.golden_dandelion.name=Golden Dandelion
+subtitles.item.golden_dandelion.use=Golden Dandelion locks age
+subtitles.item.golden_dandelion.unuse=Golden Dandelion unlocks age
