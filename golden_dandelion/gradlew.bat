@@ -39,8 +39,8 @@ if exist "%APP_HOME%jdk.local" (
     for /f "usebackq delims=" %%i in ("%APP_HOME%jdk.local") do set "PROJECT_JAVA_HOME=%%i"
 )
 if not defined PROJECT_JAVA_HOME (
-    if exist "%USERPROFILE%\.mcreator\gradle\jdks\jdk8u302-b08\bin\java.exe" (
-        set "PROJECT_JAVA_HOME=%USERPROFILE%\.mcreator\gradle\jdks\jdk8u302-b08"
+    if defined JAVA_HOME (
+        set "PROJECT_JAVA_HOME=%JAVA_HOME%"
     )
 )
 if defined PROJECT_JAVA_HOME (

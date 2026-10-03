@@ -76,5 +76,3 @@ tasks.whenTaskAdded { task ->
 		task.dependsOn 'classes'
 	}
 }
-
-apply from: 'mcreator.gradle'
