@@ -1,0 +1,10 @@
+{
+  "variants": {
+    "normal": {
+      "model": "golden_dandelion:golden_dandelion"
+    },
+    "inventory": {
+      "model": "golden_dandelion:item/golden_dandelion"
+    }
+  }
+}

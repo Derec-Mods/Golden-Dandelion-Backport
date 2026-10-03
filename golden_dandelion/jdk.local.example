@@ -1,0 +1,3 @@
+# Copy to jdk.local (gitignored) with a single line: your JDK 8 install path.
+# Example (MCreator bundled JDK):
+# C:\Users\YOUR_USER\.mcreator\gradle\jdks\jdk8u302-b08

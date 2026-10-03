@@ -32,6 +32,22 @@ if "%DIRNAME%" == "" set DIRNAME=.
 set APP_BASE_NAME=%~n0
 set APP_HOME=%DIRNAME%
 
+@rem Project-local JDK 8 for Forge 1.12.2 (setlocal scope only — does NOT change system JAVA_HOME).
+@rem Optional one-line override: create jdk.local in this folder with your JDK 8 path.
+set "PROJECT_JAVA_HOME="
+if exist "%APP_HOME%jdk.local" (
+    for /f "usebackq delims=" %%i in ("%APP_HOME%jdk.local") do set "PROJECT_JAVA_HOME=%%i"
+)
+if not defined PROJECT_JAVA_HOME (
+    if exist "%USERPROFILE%\.mcreator\gradle\jdks\jdk8u302-b08\bin\java.exe" (
+        set "PROJECT_JAVA_HOME=%USERPROFILE%\.mcreator\gradle\jdks\jdk8u302-b08"
+    )
+)
+if defined PROJECT_JAVA_HOME (
+    set "JAVA_HOME=%PROJECT_JAVA_HOME%"
+    set "PATH=%JAVA_HOME%\bin;%PATH%"
+)
+
 @rem Find java.exe
 if defined JAVA_HOME goto findJavaFromJavaHome
 
