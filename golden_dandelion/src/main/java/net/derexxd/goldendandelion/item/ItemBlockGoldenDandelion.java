@@ -10,6 +10,8 @@ import net.minecraft.item.ItemBlock;
 import net.minecraft.item.ItemStack;
 import net.minecraft.nbt.NBTTagCompound;
 import net.minecraft.util.EnumHand;
+import net.minecraft.util.EnumParticleTypes;
+import net.minecraft.world.WorldServer;
 
 public class ItemBlockGoldenDandelion extends ItemBlock {
 
@@ -58,6 +60,10 @@ public class ItemBlockGoldenDandelion extends ItemBlock {
 			data.removeTag(GoldenDandelionConstants.NBT_SAVED_AGE);
 
 			ageable.setGrowingAge(savedAge);
+
+			if (player.world instanceof WorldServer) {
+				spawnFeedbackParticles((WorldServer) player.world, ageable, false);
+			}
 		} else {
 			// Halting Growth: set lock tag
 			int currentAge = ageable.getGrowingAge();
@@ -65,6 +71,10 @@ public class ItemBlockGoldenDandelion extends ItemBlock {
 			data.setBoolean(GoldenDandelionConstants.NBT_AGE_LOCKED, true);
 			ageable.setGrowingAge(GoldenDandelionConstants.LOCKED_BABY_AGE);
 			ageable.enablePersistence();
+
+			if (player.world instanceof WorldServer) {
+				spawnFeedbackParticles((WorldServer) player.world, ageable, true);
+			}
 		}
 
 		if (!player.capabilities.isCreativeMode) {
@@ -73,5 +83,28 @@ public class ItemBlockGoldenDandelion extends ItemBlock {
 		player.swingArm(hand);
 
 		return true;
+	}
+
+	private void spawnFeedbackParticles(WorldServer world, EntityAgeable target, boolean locking) {
+		double width = target.width;
+		double height = target.height;
+		int count = 16;
+
+		for (int i = 0; i < count; i++) {
+			double px = target.posX + (world.rand.nextDouble() - 0.5D) * width * 1.2D;
+			double pz = target.posZ + (world.rand.nextDouble() - 0.5D) * width * 1.2D;
+			double motionX = (world.rand.nextDouble() - 0.5D) * 0.04D;
+			double motionZ = (world.rand.nextDouble() - 0.5D) * 0.04D;
+
+			if (locking) {
+				// Downward-moving green particles
+				double py = target.posY + height * 0.6D + world.rand.nextDouble() * height * 0.4D;
+				world.spawnParticle(EnumParticleTypes.VILLAGER_HAPPY, px, py, pz, 0, motionX, -0.12D, motionZ, 1.0D);
+			} else {
+				// Upward-moving green particles
+				double py = target.posY + world.rand.nextDouble() * height * 0.4D;
+				world.spawnParticle(EnumParticleTypes.VILLAGER_HAPPY, px, py, pz, 0, motionX, 0.12D, motionZ, 1.0D);
+			}
+		}
 	}
 }
