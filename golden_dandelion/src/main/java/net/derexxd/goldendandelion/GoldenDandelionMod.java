@@ -23,6 +23,7 @@ import net.minecraft.client.renderer.block.model.ModelResourceLocation;
 import net.minecraft.client.renderer.block.statemap.StateMapperBase;
 import net.minecraft.item.Item;
 import net.minecraft.util.SoundEvent;
+import net.minecraftforge.oredict.OreDictionary;
 
 @Mod(
 		modid = GoldenDandelionMod.MODID,
@@ -56,6 +57,8 @@ public class GoldenDandelionMod {
 
 	@Mod.EventHandler
 	public void init(FMLInitializationEvent event) {
+		OreDictionary.registerOre("flower", GOLDEN_DANDELION);
+		OreDictionary.registerOre("flowerYellow", GOLDEN_DANDELION);
 		proxy.init(event);
 	}
 

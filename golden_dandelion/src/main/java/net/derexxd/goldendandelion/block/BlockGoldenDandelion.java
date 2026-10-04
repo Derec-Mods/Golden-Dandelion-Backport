@@ -25,7 +25,8 @@ public class BlockGoldenDandelion extends BlockBush {
 		this.setHardness(0.0F);
 		this.setResistance(0.0F);
 		this.setLightOpacity(0);
-		this.setCreativeTab(CreativeTabs.BUILDING_BLOCKS);
+		this.setCreativeTab(CreativeTabs.DECORATIONS);
+		this.setTranslationKey("golden_dandelion");
 	}
 
 	@Override
