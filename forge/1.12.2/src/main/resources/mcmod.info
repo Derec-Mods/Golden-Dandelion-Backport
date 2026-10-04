@@ -3,7 +3,7 @@
     "modid": "golden_dandelion",
     "name": "Golden Dandelion",
     "description": "Backports the newly added Golden Dandelion, a flower that permanently pauses the aging of baby mobs when fed to them.",
-    "version": "1.0.6.1",
+    "version": "1.0.6.3",
     "credits": "",
     "logoFile": "",
     "mcversion": "1.12.2",

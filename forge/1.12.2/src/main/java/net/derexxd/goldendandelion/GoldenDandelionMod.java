@@ -26,29 +26,23 @@ import net.minecraft.util.SoundEvent;
 import net.minecraftforge.oredict.OreDictionary;
 
 /**
- * Made by derexxd ported from the other golden dandelion ports for future versions I work on, made using mcreator boilerplate template for ease of speeding up
+ * Made by derexxd ported from the other golden dandelion ports for future
+ * versions I work on, made using mcreator boilerplate template for ease of
+ * speeding up
  */
-@Mod(
-		modid = GoldenDandelionMod.MODID,
-		name = GoldenDandelionMod.NAME,
-		version = GoldenDandelionMod.VERSION,
-		acceptedMinecraftVersions = "[1.12.2]"
-)
+@Mod(modid = GoldenDandelionMod.MODID, name = GoldenDandelionMod.NAME, version = GoldenDandelionMod.VERSION, acceptedMinecraftVersions = "[1.12.2]")
 public class GoldenDandelionMod {
 
 	public static final String MODID = "golden_dandelion";
 	public static final String NAME = "Golden Dandelion";
-	public static final String VERSION = "1.0.6.1";
+	public static final String VERSION = "1.0.6.3";
 
 	public static final BlockGoldenDandelion GOLDEN_DANDELION = new BlockGoldenDandelion();
 
 	@Mod.Instance(MODID)
 	public static GoldenDandelionMod instance;
 
-	@SidedProxy(
-			clientSide = "net.derexxd.goldendandelion.ClientProxyGoldenDandelionMod",
-			serverSide = "net.derexxd.goldendandelion.ServerProxyGoldenDandelionMod"
-	)
+	@SidedProxy(clientSide = "net.derexxd.goldendandelion.ClientProxyGoldenDandelionMod", serverSide = "net.derexxd.goldendandelion.ServerProxyGoldenDandelionMod")
 	public static IProxyGoldenDandelionMod proxy;
 
 	@Mod.EventHandler
@@ -84,16 +78,14 @@ public class GoldenDandelionMod {
 	@SubscribeEvent
 	public void registerItems(RegistryEvent.Register<Item> event) {
 		event.getRegistry().register(
-				new ItemBlockGoldenDandelion(GOLDEN_DANDELION).setRegistryName(GOLDEN_DANDELION.getRegistryName())
-		);
+				new ItemBlockGoldenDandelion(GOLDEN_DANDELION).setRegistryName(GOLDEN_DANDELION.getRegistryName()));
 	}
 
 	@SubscribeEvent
 	public void registerSounds(RegistryEvent.Register<SoundEvent> event) {
 		event.getRegistry().registerAll(
 				GoldenDandelionSounds.ITEM_USE,
-				GoldenDandelionSounds.ITEM_UNUSE
-		);
+				GoldenDandelionSounds.ITEM_UNUSE);
 	}
 
 	@SubscribeEvent
@@ -109,7 +101,6 @@ public class GoldenDandelionMod {
 		ModelLoader.setCustomModelResourceLocation(
 				Item.getItemFromBlock(GOLDEN_DANDELION),
 				0,
-				new ModelResourceLocation(GOLDEN_DANDELION.getRegistryName(), "inventory")
-		);
+				new ModelResourceLocation(GOLDEN_DANDELION.getRegistryName(), "inventory"));
 	}
 }
