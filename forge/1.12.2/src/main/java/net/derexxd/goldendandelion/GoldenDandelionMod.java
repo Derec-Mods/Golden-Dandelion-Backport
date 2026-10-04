@@ -25,6 +25,9 @@ import net.minecraft.item.Item;
 import net.minecraft.util.SoundEvent;
 import net.minecraftforge.oredict.OreDictionary;
 
+/**
+ * Made by derexxd ported from the other golden dandelion ports for future versions I work on, made using mcreator boilerplate template for ease of speeding up
+ */
 @Mod(
 		modid = GoldenDandelionMod.MODID,
 		name = GoldenDandelionMod.NAME,

@@ -15,6 +15,9 @@ import net.minecraft.util.EnumParticleTypes;
 import net.minecraft.util.SoundCategory;
 import net.minecraft.world.WorldServer;
 
+/**
+ * Made by derexxd ported from the other golden dandelion ports for future versions I work on, made using mcreator boilerplate template for ease of speeding up
+ */
 public class ItemBlockGoldenDandelion extends ItemBlock {
 
 	public ItemBlockGoldenDandelion(Block block) {
@@ -48,11 +51,9 @@ public class ItemBlockGoldenDandelion extends ItemBlock {
 			return true;
 		}
 
-		// 2-second cooldown per mob (40 ticks)
 		data.setLong(GoldenDandelionConstants.NBT_COOLDOWN, currentTime + GoldenDandelionConstants.COOLDOWN_TICKS);
 
 		if (isLocked) {
-			// Resuming Growth: reset lock tag
 			data.removeTag(GoldenDandelionConstants.NBT_AGE_LOCKED);
 			data.removeTag(GoldenDandelionConstants.NBT_AGE_LOCKED_LEGACY);
 
@@ -68,7 +69,6 @@ public class ItemBlockGoldenDandelion extends ItemBlock {
 			}
 			player.world.playSound(null, target.posX, target.posY, target.posZ, GoldenDandelionSounds.ITEM_UNUSE, SoundCategory.PLAYERS, 1.0F, 1.0F);
 		} else {
-			// Halting Growth: set lock tag
 			int currentAge = ageable.getGrowingAge();
 			data.setInteger(GoldenDandelionConstants.NBT_SAVED_AGE, currentAge);
 			data.setBoolean(GoldenDandelionConstants.NBT_AGE_LOCKED, true);
@@ -101,11 +101,9 @@ public class ItemBlockGoldenDandelion extends ItemBlock {
 			double motionZ = (world.rand.nextDouble() - 0.5D) * 0.04D;
 
 			if (locking) {
-				// Downward-moving green particles
 				double py = target.posY + height * 0.6D + world.rand.nextDouble() * height * 0.4D;
 				world.spawnParticle(EnumParticleTypes.VILLAGER_HAPPY, px, py, pz, 0, motionX, -0.12D, motionZ, 1.0D);
 			} else {
-				// Negative particles on reversal (upward-moving smoke)
 				double py = target.posY + world.rand.nextDouble() * height * 0.5D;
 				world.spawnParticle(EnumParticleTypes.SMOKE_NORMAL, px, py, pz, 0, motionX, 0.08D, motionZ, 1.0D);
 			}
