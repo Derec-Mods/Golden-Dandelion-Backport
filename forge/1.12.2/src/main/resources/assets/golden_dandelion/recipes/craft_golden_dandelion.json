@@ -1,0 +1,43 @@
+{
+  "group": "golden_dandelion",
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "012",
+    "345",
+    "678"
+  ],
+  "key": {
+    "0": {
+      "item": "minecraft:gold_nugget"
+    },
+    "1": {
+      "item": "minecraft:gold_nugget"
+    },
+    "2": {
+      "item": "minecraft:gold_nugget"
+    },
+    "3": {
+      "item": "minecraft:gold_nugget"
+    },
+    "4": {
+      "item": "minecraft:yellow_flower",
+      "data": 32767
+    },
+    "5": {
+      "item": "minecraft:gold_nugget"
+    },
+    "6": {
+      "item": "minecraft:gold_nugget"
+    },
+    "7": {
+      "item": "minecraft:gold_nugget"
+    },
+    "8": {
+      "item": "minecraft:gold_nugget"
+    }
+  },
+  "result": {
+    "item": "golden_dandelion:golden_dandelion",
+    "count": 1
+  }
+}

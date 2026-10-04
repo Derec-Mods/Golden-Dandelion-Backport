@@ -1,0 +1,20 @@
+{
+  "item.golden_dandelion.use": {
+    "category": "player",
+    "subtitle": "subtitles.item.golden_dandelion.use",
+    "sounds": [
+      {
+        "name": "golden_dandelion:golden_dandelion_use"
+      }
+    ]
+  },
+  "item.golden_dandelion.unuse": {
+    "category": "player",
+    "subtitle": "subtitles.item.golden_dandelion.unuse",
+    "sounds": [
+      {
+        "name": "golden_dandelion:golden_dandelion_unuse"
+      }
+    ]
+  }
+}
