@@ -66,7 +66,7 @@ public class ItemBlockGoldenDandelion extends ItemBlock {
 			if (player.world instanceof WorldServer) {
 				spawnFeedbackParticles((WorldServer) player.world, ageable, false);
 			}
-			player.world.playSound(null, target.posX, target.posY, target.posZ, GoldenDandelionSounds.ITEM_UNUSE, SoundCategory.PLAYERS, 1.0F, 1.25F);
+			player.world.playSound(null, target.posX, target.posY, target.posZ, GoldenDandelionSounds.ITEM_UNUSE, SoundCategory.PLAYERS, 1.0F, 1.0F);
 		} else {
 			// Halting Growth: set lock tag
 			int currentAge = ageable.getGrowingAge();
@@ -78,7 +78,7 @@ public class ItemBlockGoldenDandelion extends ItemBlock {
 			if (player.world instanceof WorldServer) {
 				spawnFeedbackParticles((WorldServer) player.world, ageable, true);
 			}
-			player.world.playSound(null, target.posX, target.posY, target.posZ, GoldenDandelionSounds.ITEM_USE, SoundCategory.PLAYERS, 1.0F, 0.85F);
+			player.world.playSound(null, target.posX, target.posY, target.posZ, GoldenDandelionSounds.ITEM_USE, SoundCategory.PLAYERS, 1.0F, 1.0F);
 		}
 
 		if (!player.capabilities.isCreativeMode) {
@@ -105,9 +105,9 @@ public class ItemBlockGoldenDandelion extends ItemBlock {
 				double py = target.posY + height * 0.6D + world.rand.nextDouble() * height * 0.4D;
 				world.spawnParticle(EnumParticleTypes.VILLAGER_HAPPY, px, py, pz, 0, motionX, -0.12D, motionZ, 1.0D);
 			} else {
-				// Upward-moving green particles
-				double py = target.posY + world.rand.nextDouble() * height * 0.4D;
-				world.spawnParticle(EnumParticleTypes.VILLAGER_HAPPY, px, py, pz, 0, motionX, 0.12D, motionZ, 1.0D);
+				// Negative particles on reversal (upward-moving smoke)
+				double py = target.posY + world.rand.nextDouble() * height * 0.5D;
+				world.spawnParticle(EnumParticleTypes.SMOKE_NORMAL, px, py, pz, 0, motionX, 0.08D, motionZ, 1.0D);
 			}
 		}
 	}

@@ -4,8 +4,7 @@
     "subtitle": "subtitles.item.golden_dandelion.use",
     "sounds": [
       {
-        "name": "minecraft:entity/experience_orb/touch",
-        "pitch": 0.85
+        "name": "golden_dandelion:golden_dandelion_use"
       }
     ]
   },
@@ -14,8 +13,7 @@
     "subtitle": "subtitles.item.golden_dandelion.unuse",
     "sounds": [
       {
-        "name": "minecraft:entity/experience_orb/touch",
-        "pitch": 1.25
+        "name": "golden_dandelion:golden_dandelion_unuse"
       }
     ]
   }
