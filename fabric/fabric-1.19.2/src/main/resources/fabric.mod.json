@@ -1,33 +1,29 @@
-﻿{
+{
 	"schemaVersion": 1,
-	"id": "modid",
+	"id": "golden_dandelion",
 	"version": "${version}",
-	"name": "Example Mod",
-	"description": "This is an example description! Tell everyone what your mod is about!",
+	"name": "Golden Dandelion",
+	"description": "Backports the Golden Dandelion, a flower that permanently pauses the aging of baby mobs when fed to them.",
 	"authors": [
 		"DerexXD"
 	],
 	"contact": {
 		"homepage": "https://www.derekchen.dev/",
-		"sources": "https://github.com/FabricMC/fabric-example-mod"
+		"sources": "https://github.com/DereC4"
 	},
 	"license": "CC0-1.0",
-	"icon": "assets/modid/icon.png",
+	"icon": "assets/golden_dandelion/textures/thumbnail.png",
 	"environment": "*",
 	"entrypoints": {
 		"main": [
-			"com.example.ExampleMod"
+			"net.derexxd.goldendandelion.GoldenDandelionMod"
 		],
 		"client": [
-			"com.example.client.ExampleModClient"
+			"net.derexxd.goldendandelion.client.GoldenDandelionModClient"
 		]
 	},
 	"mixins": [
-		"modid.mixins.json",
-		{
-			"config": "modid.client.mixins.json",
-			"environment": "client"
-		}
+		"golden_dandelion.mixins.json"
 	],
 	"depends": {
 		"fabricloader": ">=0.19.5",
