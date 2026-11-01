@@ -1,0 +1,21 @@
+{
+	"type": "minecraft:crafting_shaped",
+	"pattern": [
+		"###",
+		"#D#",
+		"###"
+	],
+	"key": {
+		"#": {
+			"item": "minecraft:gold_nugget"
+		},
+		"D": {
+			"item": "minecraft:dandelion"
+		}
+	},
+	"result": {
+		"item": "golden_dandelion:golden_dandelion",
+		"count": 1
+	}
+}
+
