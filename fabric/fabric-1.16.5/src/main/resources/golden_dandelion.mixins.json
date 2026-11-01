@@ -1,14 +1,12 @@
 {
 	"required": true,
-	"package": "com.example.mixin",
+	"package": "net.derexxd.goldendandelion.mixin",
 	"compatibilityLevel": "JAVA_8",
 	"mixins": [
-		"ExampleMixin"
+		"AgableMobMixin"
 	],
 	"injectors": {
 		"defaultRequire": 1
-	},
-	"overwrites": {
-		"requireAnnotations": true
 	}
 }
+
