@@ -14,8 +14,7 @@
 		}
 	},
 	"result": {
-		"item": "golden_dandelion:golden_dandelion",
+		"id": "golden_dandelion:golden_dandelion",
 		"count": 1
 	}
 }
-
