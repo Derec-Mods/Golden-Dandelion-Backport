@@ -1,0 +1,21 @@
+{
+	"golden_dandelion_use": {
+		"category": "player",
+		"sounds": [
+			{
+				"name": "golden_dandelion:golden_dandelion_use",
+				"stream": false
+			}
+		]
+	},
+	"golden_dandelion_unuse": {
+		"category": "player",
+		"sounds": [
+			{
+				"name": "golden_dandelion:golden_dandelion_unuse",
+				"stream": false
+			}
+		]
+	}
+}
+
